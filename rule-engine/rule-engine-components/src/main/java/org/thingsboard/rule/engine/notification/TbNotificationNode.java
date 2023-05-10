@@ -34,10 +34,10 @@ import java.util.concurrent.ExecutionException;
 
 @RuleNode(
         type = ComponentType.EXTERNAL,
-        name = "send notification",
+        name = "发送通知",
         configClazz = TbNotificationNodeConfiguration.class,
-        nodeDescription = "Sends notification to targets using the template",
-        nodeDetails = "Will send notification to the specified targets using the template",
+        nodeDescription = "使用模板向目标发送通知",
+        nodeDetails = "将使用模板向指定目标发送通知",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbExternalNodeNotificationConfig",
         icon = "notifications"
