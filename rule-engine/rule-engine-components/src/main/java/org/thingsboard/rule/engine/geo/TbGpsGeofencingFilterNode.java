@@ -28,36 +28,36 @@ import org.thingsboard.server.common.msg.TbMsg;
 @Slf4j
 @RuleNode(
         type = ComponentType.FILTER,
-        name = "gps geofencing filter",
+        name = "GPS地理围栏过滤器",
         configClazz = TbGpsGeofencingFilterNodeConfiguration.class,
         relationTypes = {"True", "False"},
-        nodeDescription = "Filter incoming messages by GPS based geofencing",
-        nodeDetails = "Extracts latitude and longitude parameters from the incoming message and checks them according to configured perimeter. </br>" +
-                "Configuration:</br></br>" +
+        nodeDescription = "通过基于GPS的地理围栏过滤传入消息",
+        nodeDetails = "从传入的信息中提取经纬度参数，并根据配置的周长进行检查。</br>" +
+                "配置:</br></br>" +
                 "<ul>" +
-                "<li>Latitude key name - name of the message field that contains location latitude;</li>" +
-                "<li>Longitude key name - name of the message field that contains location longitude;</li>" +
-                "<li>Perimeter type - Polygon or Circle;</li>" +
-                "<li>Fetch perimeter from message metadata - checkbox to load perimeter from message metadata; " +
-                "   Enable if your perimeter is specific to device/asset and you store it as device/asset attribute;</li>" +
-                "<li>Perimeter key name - name of the metadata key that stores perimeter information;</li>" +
-                "<li>For Polygon perimeter type: <ul>" +
-                "    <li>Polygon definition - string that contains array of coordinates in the following format: [[lat1, lon1],[lat2, lon2],[lat3, lon3], ... , [latN, lonN]]</li>" +
+                "<li>纬度键名-包含位置纬度的消息字段的名称;</li>" +
+                "<li>经度键名-包含位置经度的消息字段的名称;</li>" +
+                "<li>周长型-多边形或圆形;</li>" +
+                "<li>从消息元数据中获取周长-复选框用于从消息元数据中加载周长;" +
+                "   如果你的周界是特定于设备/资产的，并且你把它存储为设备/资产属性，则启用；</li>" +
+                "<li>周界密钥名称——存储周界信息的元数据密钥名称;</li>" +
+                "<li>对于多边形周长类型: <ul>" +
+                "    <li>多边形定义 - 包含以下格式的坐标阵列的字符串： [[lat1, lon1], [lat2, lon2], [lat3, lon3], ... , [latN, lonN]]</li>" +
                 "</ul></li>" +
-                "<li>For Circle perimeter type: <ul>" +
-                "   <li>Center latitude - latitude of the circle perimeter center;</li>" +
-                "   <li>Center longitude - longitude of the circle perimeter center;</li>" +
-                "   <li>Range - value of the circle perimeter range, double-precision floating-point value;</li>" +
-                "   <li>Range units - one of: Meter, Kilometer, Foot, Mile, Nautical Mile;</li>" +
+                "<li>对于圆周型:<ul>" +
+                "   <li>圆心纬度——圆周长圆心的纬度;</li>" +
+                "   <li>圆心经度——圆周长圆心的经度;</li>" +
+                "   <li>范围 -圆周长范围值，双精度浮点值;</li>" +
+                "   <li>范围单位-米，公里，英尺，英里，海里之一;</li>" +
                 "</ul></li></ul></br>" +
-                "Rule node will use default metadata key names, if the \"Fetch perimeter from message metadata\" is enabled and \"Perimeter key name\" is not configured. " +
-                "Default metadata key names for polygon perimeter type is \"perimeter\". Default metadata key names for circle perimeter are: \"centerLatitude\", \"centerLongitude\", \"range\", \"rangeUnit\"." +
+                "如果启用了 \"从信息元数据中获取周边信息\"并且没有配置 \"周边密钥名称\"，规则节点将使用默认的元数据键名。" +
+                "多边形周长类型的默认元数据键名是 \"周长\"。圆周长的默认元数据键名是： \"centerLatitude\"、\"centerLongitude\"、\"range\"、\"rangeUnit\"。" +
                 "</br></br>" +
-                "Structure of the circle perimeter definition (stored in server-side attribute, for example):" +
+                "圆周定义的结构(例如存储在服务器端属性中):" +
                 "</br></br>" +
                 "{\"latitude\":  48.198618758582384, \"longitude\": 24.65322245153503, \"radius\":  100.0, \"radiusUnit\": \"METER\" }" +
                 "</br></br>" +
-                "Available radius units: METER, KILOMETER, FOOT, MILE, NAUTICAL_MILE;",
+                "可选半径单位:米、公里、英尺、英里、海里;",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbFilterNodeGpsGeofencingConfig")
 public class TbGpsGeofencingFilterNode extends AbstractGeofencingNode<TbGpsGeofencingFilterNodeConfiguration> {

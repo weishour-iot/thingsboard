@@ -40,13 +40,13 @@ import static org.thingsboard.server.common.data.DataConstants.SCOPE;
 @Slf4j
 @RuleNode(
         type = ComponentType.ACTION,
-        name = "save attributes",
+        name = "保存属性",
         configClazz = TbMsgAttributesNodeConfiguration.class,
-        nodeDescription = "Saves attributes data",
-        nodeDetails = "Saves entity attributes based on configurable scope parameter. Expects messages with 'POST_ATTRIBUTES_REQUEST' message type. " +
-                      "If upsert(update/insert) operation is completed successfully rule node will send the incoming message via <b>Success</b> chain, otherwise, <b>Failure</b> chain is used. " +
-                      "Additionally if checkbox <b>Send attributes updated notification</b> is set to true, rule node will put the \"Attributes Updated\" " +
-                      "event for <b>SHARED_SCOPE</b> and <b>SERVER_SCOPE</b> attributes updates to the corresponding rule engine queue.",
+        nodeDescription = "保存属性数据",
+        nodeDetails = "根据可配置的范围参数保存实体属性。 需要消息类型为“POST_ATTRIBUTES_REQUEST”的消息。" +
+                      "如果更新插入（更新/插入）操作成功完成，规则节点将通过<b>Success</b>链发送传入消息，否则，使用<b>Failure</b>链。" +
+                      "此外，如果复选框 <b>发送属性更新通知</b> 设置为 true，规则节点将放置“Attributes Updated”" +
+                      "<b>SHARED_SCOPE</b> 和 <b>SERVER_SCOPE</b> 属性的事件更新到相应的规则引擎队列。",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbActionNodeAttributesConfig",
         icon = "file_upload"

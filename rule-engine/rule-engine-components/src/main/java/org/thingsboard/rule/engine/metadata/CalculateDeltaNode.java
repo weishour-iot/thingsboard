@@ -44,13 +44,13 @@ import java.util.concurrent.ConcurrentHashMap;
 
 @Slf4j
 @RuleNode(type = ComponentType.ENRICHMENT,
-        name = "calculate delta", relationTypes = {"Success", "Failure", "Other"},
+        name = "计算变量增量", relationTypes = {"Success", "Failure", "Other"},
         configClazz = CalculateDeltaNodeConfiguration.class,
-        nodeDescription = "Calculates and adds 'delta' value into message based on the incoming and previous value",
-        nodeDetails = "Calculates delta and period based on the previous time-series reading and current data. " +
-                "Delta calculation is done in scope of the message originator, e.g. device, asset or customer. " +
-                "If there is input key, the output relation will be 'Success' unless delta is negative and corresponding configuration parameter is set. " +
-                "If there is no input value key in the incoming message, the output relation will be 'Other'.",
+        nodeDescription = "根据传入值和前一个值计算并将“增量”值添加到消息中",
+        nodeDetails = "根据以前的时间序列读数和当前数据计算增量和周期。" +
+                "增量计算在消息发送者的范围内完成，例如设备、资产或客户。" +
+                "如果有输入键，则输出关系为“Success”，除非delta为负并设置了相应的配置参数。" +
+                "如果传入消息中没有输入值键，则输出关系将是'Other'。",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbEnrichmentNodeCalculateDeltaConfig")
 public class CalculateDeltaNode implements TbNode {

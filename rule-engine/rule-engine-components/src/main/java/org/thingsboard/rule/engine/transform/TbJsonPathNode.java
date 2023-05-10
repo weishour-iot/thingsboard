@@ -35,13 +35,13 @@ import java.util.concurrent.ExecutionException;
 @Slf4j
 @RuleNode(
         type = ComponentType.TRANSFORMATION,
-        name = "json path",
+        name = "JsonPath",
         configClazz = TbJsonPathNodeConfiguration.class,
-        nodeDescription = "Transforms incoming message body using JSONPath expression.",
-        nodeDetails = "JSONPath expression specifies a path to an element or a set of elements in a JSON structure. <br/>"
-                + "<b>'$'</b> represents the root object or array. <br/>"
-                + "If JSONPath expression evaluation failed, incoming message routes via <code>Failure</code> chain, "
-                + "otherwise <code>Success</code> chain is used.",
+        nodeDescription = "使用 JSONPath 表达式转换传入的消息正文。",
+        nodeDetails = "JSONPath 表达式指定 JSON 结构中一个元素或一组元素的路径。 <br/>"
+                + "<b>'$'</b> 表示根对象或数组。 <br/>"
+                + "如果 JSONPath 表达式评估失败，则传入消息通过 <code>Failure</code> 链路由，"
+                + "否则使用 <code>Success</code> 链。",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         icon = "functions",
         configDirective = "tbTransformationNodeJsonPathConfig"

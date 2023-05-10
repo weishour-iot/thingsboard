@@ -27,11 +27,11 @@ import org.thingsboard.server.common.data.plugin.ComponentType;
 @Slf4j
 @RuleNode(
         type = ComponentType.FILTER,
-        name = "entity type switch",
+        name = "实体类型切换",
         configClazz = EmptyNodeConfiguration.class,
         relationTypes = {"Device", "Asset", "Alarm", "Entity View", "Tenant", "Customer", "User", "Dashboard", "Rule chain", "Rule node", "Edge"},
-        nodeDescription = "Route incoming messages by Message Originator Type",
-        nodeDetails = "Routes messages to chain according to the entity type ('Device', 'Asset', etc.).",
+        nodeDescription = "按消息发起者类型路由传入消息",
+        nodeDetails = "根据实体类型（“设备”、“资产”等）将消息路由到链。",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbNodeEmptyConfig")
 public class TbOriginatorTypeSwitchNode extends TbAbstractTypeSwitchNode {

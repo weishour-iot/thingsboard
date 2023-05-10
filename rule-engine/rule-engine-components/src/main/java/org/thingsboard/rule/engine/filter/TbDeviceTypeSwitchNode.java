@@ -29,12 +29,12 @@ import org.thingsboard.server.common.data.plugin.ComponentType;
 @Slf4j
 @RuleNode(
         type = ComponentType.FILTER,
-        name = "device profile switch",
+        name = "设备配置文件切换",
         customRelations = true,
         relationTypes = {"default"},
         configClazz = EmptyNodeConfiguration.class,
-        nodeDescription = "Route incoming messages based on the name of the device profile",
-        nodeDetails = "Route incoming messages based on the name of the device profile. The device profile name is case-sensitive",
+        nodeDescription = "根据设备配置文件的名称路由传入消息",
+        nodeDetails = "根据设备配置文件的名称路由传入消息。设备配置文件名称区分大小写",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbNodeEmptyConfig")
 public class TbDeviceTypeSwitchNode extends TbAbstractTypeSwitchNode {

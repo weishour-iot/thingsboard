@@ -27,12 +27,12 @@ import org.thingsboard.server.common.data.plugin.ComponentType;
 @Slf4j
 @RuleNode(
         type = ComponentType.ENRICHMENT,
-        name="tenant attributes",
+        name="租户属性",
         configClazz = TbGetEntityAttrNodeConfiguration.class,
-        nodeDescription = "Add Originators Tenant Attributes or Latest Telemetry into Message Metadata",
-        nodeDetails = "If Attributes enrichment configured, server scope attributes are added into Message metadata. " +
-                "If Latest Telemetry enrichment configured, latest telemetry added into metadata. " +
-                "To access those attributes in other nodes this template can be used " +
+        nodeDescription = "将发起方租户属性或最新遥测数据添加到消息元数据中",
+        nodeDetails = "如果配置了属性扩充，则服务器范围属性将添加到消息元数据中。" +
+                "如果配置了最新遥测扩充，则最新遥测将添加到元数据中。" +
+                "要访问其他节点中的这些属性，可以使用此模板" +
                 "<code>metadata.temperature</code>.",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbEnrichmentNodeTenantAttributesConfig")

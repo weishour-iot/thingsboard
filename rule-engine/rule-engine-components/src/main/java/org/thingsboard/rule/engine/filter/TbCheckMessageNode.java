@@ -32,13 +32,13 @@ import java.util.Map;
 @Slf4j
 @RuleNode(
         type = ComponentType.FILTER,
-        name = "check fields presence",
+        name = "检查字段是否存在",
         relationTypes = {"True", "False"},
         configClazz = TbCheckMessageNodeConfiguration.class,
-        nodeDescription = "Checks the presence of the specified fields in the message and/or metadata.",
-        nodeDetails = "Checks the presence of the specified fields in the message and/or metadata. " +
-                "By default, the rule node checks that all specified fields need to be present. " +
-                "Uncheck the 'Check that all specified fields are present' if the presence of at least one field is sufficient.",
+        nodeDescription = "检查消息或元数据中指定字段的存在。",
+        nodeDetails = "检查消息或元数据中指定字段的存在。" +
+                "默认情况下，规则节点检查所有指定字段是否需要存在。" +
+                "如果至少存在一个字段就足够了，取消选中“检查所有指定字段是否存在”。",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbFilterNodeCheckMessageConfig")
 public class TbCheckMessageNode implements TbNode {

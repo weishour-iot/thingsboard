@@ -46,11 +46,11 @@ import java.util.concurrent.TimeoutException;
 @Slf4j
 @RuleNode(
         type = ComponentType.EXTERNAL,
-        name = "mqtt",
+        name = "MQTT",
         configClazz = TbMqttNodeConfiguration.class,
         clusteringMode = ComponentClusteringMode.USER_PREFERENCE,
-        nodeDescription = "Publish messages to the MQTT broker",
-        nodeDetails = "Will publish message payload to the MQTT broker with QoS <b>AT_LEAST_ONCE</b>.",
+        nodeDescription = "向MQTT代理发布消息",
+        nodeDetails = "将使用 QoS <b>AT_LEAST_ONCE</b> 将消息负载发布到MQTT代理。",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbExternalNodeMqttConfig",
         icon = "call_split"

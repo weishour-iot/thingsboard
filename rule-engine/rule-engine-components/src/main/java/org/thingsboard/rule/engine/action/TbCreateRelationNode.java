@@ -45,15 +45,15 @@ import java.util.List;
 @Slf4j
 @RuleNode(
         type = ComponentType.ACTION,
-        name = "create relation",
+        name = "建立关系",
         configClazz = TbCreateRelationNodeConfiguration.class,
-        nodeDescription = "Finds target Entity by entity name pattern and (entity type pattern for Asset, Device) and then create a relation to Originator Entity by type and direction." +
-                " If Selected entity type: Asset, Device or Customer will create new Entity if it doesn't exist and selected checkbox 'Create new entity if not exists'.<br>" +
-                " In case that relation from the message originator to the selected entity not exist and  If selected checkbox 'Remove current relations'," +
-                " before creating the new relation all existed relations to message originator by type and direction will be removed.<br>" +
-                " If relation from the message originator to the selected entity created and If selected checkbox 'Change originator to related entity'," +
-                " outbound message will be processed as a message from this entity.",
-        nodeDetails = "If the relation already exists or successfully created -  Message send via <b>Success</b> chain, otherwise <b>Failure</b> chain will be used.",
+        nodeDescription = "通过实体名称模式和（资产、设备的实体类型模式）查找目标实体，然后通过类型和方向创建与发起者实体的关系。" +
+                "如果选择的实体类型：资产、设备或客户将创建新实体（如果不存在）并选中复选框“如果不存在则创建新实体”。<br>" +
+                "如果从消息发起者到所选实体的关系不存在并且如果选中复选框“删除当前关系”，" +
+                "在创建新关系之前，所有与消息发起者的类型和方向的现有关系都将被删除。<br>" +
+                "如果从消息发起者到所选实体的关系已创建并且如果选中复选框“将发起者更改为相关实体”，" +
+                "出站消息将作为来自该实体的消息处理。",
+        nodeDetails = "如果关系已经存在或成功创建 - 通过<b>Success</b> 链发送消息，否则将使用<b>Failure</b> 链。",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbActionNodeCreateRelationConfig",
         icon = "add_circle"

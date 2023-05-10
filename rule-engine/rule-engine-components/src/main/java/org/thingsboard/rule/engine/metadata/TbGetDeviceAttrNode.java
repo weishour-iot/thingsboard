@@ -29,12 +29,12 @@ import org.thingsboard.server.common.msg.TbMsg;
 
 @Slf4j
 @RuleNode(type = ComponentType.ENRICHMENT,
-        name = "related device attributes",
+        name = "相关设备属性",
         configClazz = TbGetDeviceAttrNodeConfiguration.class,
-        nodeDescription = "Add Originators Related Device Attributes and Latest Telemetry value into Message Data or Metadata",
-        nodeDetails = "If Attributes enrichment configured, <b>CLIENT/SHARED/SERVER</b> attributes are added into Message data/metadata " +
-                "with specific prefix: <i>cs/shared/ss</i>. Latest telemetry value added into Message data/metadata without prefix. " +
-                "To access those attributes in other nodes this template can be used " +
+        nodeDescription = "将发起者相关设备属性和最新遥测值添加到消息数据或元数据中",
+        nodeDetails = "如果配置了属性扩充，<b>CLIENT/SHARED/SERVER</b> 属性将添加到消息数据/元数据中" +
+                "具有特定前缀：<i>cs/shared/ss</i>。最新的遥测值添加到没有前缀的消息数据/元数据中。" +
+                "要访问其他节点中的这些属性，可以使用此模板" +
                 "<code>metadata.cs_temperature</code> or <code>metadata.shared_limit</code> ",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbEnrichmentNodeDeviceAttributesConfig")

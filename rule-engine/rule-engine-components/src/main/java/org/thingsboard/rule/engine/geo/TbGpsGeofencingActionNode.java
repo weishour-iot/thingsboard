@@ -45,11 +45,11 @@ import java.util.concurrent.TimeoutException;
 @Slf4j
 @RuleNode(
         type = ComponentType.ACTION,
-        name = "gps geofencing events",
+        name = "GPS地理围栏事件",
         configClazz = TbGpsGeofencingActionNodeConfiguration.class,
         relationTypes = {"Success", "Entered", "Left", "Inside", "Outside"},
-        nodeDescription = "Produces incoming messages using GPS based geofencing",
-        nodeDetails = "Extracts latitude and longitude parameters from incoming message and returns different events based on configuration parameters",
+        nodeDescription = "使用基于GPS地理围栏生成传入消息",
+        nodeDetails = "从传入消息中提取纬度和经度参数，并根据配置参数返回不同的事件",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbActionNodeGpsGeofencingConfig"
 )

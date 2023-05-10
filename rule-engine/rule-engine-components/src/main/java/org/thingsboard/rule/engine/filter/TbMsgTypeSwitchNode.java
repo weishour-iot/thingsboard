@@ -31,14 +31,14 @@ import org.thingsboard.server.common.msg.session.SessionMsgType;
 @Slf4j
 @RuleNode(
         type = ComponentType.FILTER,
-        name = "message type switch",
+        name = "消息类型切换",
         configClazz = EmptyNodeConfiguration.class,
         relationTypes = {"Post attributes", "Post telemetry", "RPC Request from Device", "RPC Request to Device", "RPC Queued", "RPC Sent", "RPC Delivered", "RPC Successful", "RPC Timeout", "RPC Expired", "RPC Failed", "RPC Deleted",
                 "Activity Event", "Inactivity Event", "Connect Event", "Disconnect Event", "Entity Created", "Entity Updated", "Entity Deleted", "Entity Assigned",
                 "Entity Unassigned", "Attributes Updated", "Attributes Deleted", "Alarm Acknowledged", "Alarm Cleared", "Alarm Assigned", "Alarm Unassigned", "Comment Created", "Comment Updated", "Other", "Entity Assigned From Tenant", "Entity Assigned To Tenant",
                 "Relation Added or Updated", "Relation Deleted", "All Relations Deleted", "Timeseries Updated", "Timeseries Deleted"},
-        nodeDescription = "Route incoming messages by Message Type",
-        nodeDetails = "Sends messages with message types <b>\"Post attributes\", \"Post telemetry\", \"RPC Request\"</b> etc. via corresponding chain, otherwise <b>Other</b> chain is used.",
+        nodeDescription = "按消息类型路由传入消息",
+        nodeDetails = "通过相应的链发送消息类型为 \"发布属性\"、\"发布遥测\"、\"RPC请求\"等的消息，否则使用其他链。",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbNodeEmptyConfig")
 public class TbMsgTypeSwitchNode implements TbNode {

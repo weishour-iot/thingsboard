@@ -28,9 +28,9 @@ import org.thingsboard.server.common.msg.TbMsg;
 @Slf4j
 @RuleNode(
         type = ComponentType.ACTION,
-        name = "synchronization end",
+        name = "同步结束",
         configClazz = EmptyNodeConfiguration.class,
-        nodeDescription = "This Node is now deprecated. Use \"Checkpoint\" instead.",
+        nodeDescription = "此节点现已弃用。 请改用“检查点”。",
         nodeDetails = "",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = ("tbNodeEmptyConfig")

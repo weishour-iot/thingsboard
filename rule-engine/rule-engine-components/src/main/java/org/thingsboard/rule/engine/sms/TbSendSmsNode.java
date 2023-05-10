@@ -31,10 +31,10 @@ import static org.thingsboard.common.util.DonAsynchron.withCallback;
 @Slf4j
 @RuleNode(
         type = ComponentType.EXTERNAL,
-        name = "send sms",
+        name = "发送短信",
         configClazz = TbSendSmsNodeConfiguration.class,
-        nodeDescription = "Sends SMS message via SMS provider.",
-        nodeDetails = "Will send SMS message by populating target phone numbers and sms message fields using values derived from message metadata.",
+        nodeDescription = "通过 SMS 提供商发送 SMS 消息。",
+        nodeDetails = "将使用从消息元数据派生的值填充目标电话号码和 SMS 消息字段来发送 SMS 消息。",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbExternalNodeSendSmsConfig",
         icon = "sms"

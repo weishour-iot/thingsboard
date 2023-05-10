@@ -44,15 +44,15 @@ import java.util.UUID;
 @Slf4j
 @RuleNode(
         type = ComponentType.ACTION,
-        name = "push to edge",
+        name = "推送边缘",
         configClazz = TbMsgPushToEdgeNodeConfiguration.class,
-        nodeDescription = "Push messages from cloud to edge",
-        nodeDetails = "Push messages from cloud to edge. " +
-                "Message originator must be assigned to particular edge or message originator is <b>EDGE</b> entity itself. " +
-                "This node used only on cloud instances to push messages from cloud to edge. " +
-                "Once message arrived into this node it’s going to be converted into edge event and saved to the database. " +
-                "Node doesn't push messages directly to edge, but stores event(s) in the edge queue. " +
-                "<br>Supports next originator types:" +
+        nodeDescription = "将消息从云端推送到边缘",
+        nodeDetails = "将消息从云端推送到边缘。" +
+                "消息发起者必须分配给特定的边缘，或者消息发起者是 <b>EDGE</b> 实体本身。" +
+                "该节点仅在云实例上使用，用于将消息从云端推送到边缘。" +
+                "一旦消息到达该节点，它将被转换为边缘事件并保存到数据库中。" +
+                "Node 不会直接将消息推送到边缘，而是将事件存储在边缘队列中。" +
+                "<br>支持以下发起人类型：" +
                 "<br><code>DEVICE</code>" +
                 "<br><code>ASSET</code>" +
                 "<br><code>ENTITY_VIEW</code>" +
@@ -60,14 +60,14 @@ import java.util.UUID;
                 "<br><code>TENANT</code>" +
                 "<br><code>CUSTOMER</code>" +
                 "<br><code>EDGE</code><br><br>" +
-                "As well node supports next message types:" +
+                "节点也支持以下消息类型：" +
                 "<br><code>POST_TELEMETRY_REQUEST</code>" +
                 "<br><code>POST_ATTRIBUTES_REQUEST</code>" +
                 "<br><code>ATTRIBUTES_UPDATED</code>" +
                 "<br><code>ATTRIBUTES_DELETED</code>" +
                 "<br><code>ALARM</code><br><br>" +
-                "Message will be routed via <b>Failure</b> route if node was not able to save edge event to database or unsupported originator type/message type arrived. " +
-                "In case successful storage edge event to database message will be routed via <b>Success</b> route.",
+                "如果节点无法将边缘事件保存到数据库或到达不支持的发起者类型/消息类型，消息将通过<b>Failure</b>路由进行路由。" +
+                "如果成功将边缘事件存储到数据库消息，将通过 <b>Success</b> 路由进行路由。",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbActionNodePushToEdgeConfig",
         icon = "cloud_download",

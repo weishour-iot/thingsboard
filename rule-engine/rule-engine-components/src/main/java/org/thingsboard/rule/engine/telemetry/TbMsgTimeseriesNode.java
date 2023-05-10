@@ -42,20 +42,20 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 @RuleNode(
         type = ComponentType.ACTION,
-        name = "save timeseries",
+        name = "保存时间序列",
         configClazz = TbMsgTimeseriesNodeConfiguration.class,
-        nodeDescription = "Saves timeseries data",
-        nodeDetails = "Saves timeseries telemetry data based on configurable TTL parameter. Expects messages with 'POST_TELEMETRY_REQUEST' message type. " +
-                "Timestamp in milliseconds will be taken from metadata.ts, otherwise 'now' message timestamp will be applied. " +
-                "Allows stopping updating values for incoming keys in the latest ts_kv table if 'skipLatestPersistence' is set to true.\n " +
+        nodeDescription = "保存时间序列数据",
+        nodeDetails = "根据可配置的 TTL 参数保存时间序列遥测数据。 需要消息类型为“POST_TELEMETRY_REQUEST”的消息。" +
+                "以毫秒为单位的时间戳将从 metadata.ts 中获取，否则将应用“现在”消息时间戳。" +
+                "如果“跳过最新持久化”设置为 true，则允许停止更新最新 ts_kv 表中传入键的值。\n " +
                 "<br/>" +
-                "Enable 'useServerTs' param to use the timestamp of the message processing instead of the timestamp from the message. " +
-                "Useful for all sorts of sequential processing if you merge messages from multiple sources (devices, assets, etc).\n" +
+                "启用“使用服务器”参数以使用消息处理的时间戳而不是消息中的时间戳。" +
+                "如果您合并来自多个来源（设备、资产等）的消息，则对各种顺序处理很有用。\n" +
                 "<br/>" +
-                "In the case of sequential processing, the platform guarantees that the messages are processed in the order of their submission to the queue. " +
-                "However, the timestamp of the messages originated by multiple devices/servers may be unsynchronized long before they are pushed to the queue. " +
-                "The DB layer has certain optimizations to ignore the updates of the \"attributes\" and \"latest values\" tables if the new record has a timestamp that is older than the previous record. " +
-                "So, to make sure that all the messages will be processed correctly, one should enable this parameter for sequential message processing scenarios.",
+                "在顺序处理的情况下，平台保证消息按照提交到队列的顺序进行处理。" +
+                "然而，由多个设备/服务器发起的消息的时间戳可能在它们被推送到队列之前很长时间是不同步的。" +
+                "如果新记录的时间戳比前一条记录旧，DB 层会进行某些优化以忽略“属性”和“最新值”表的更新。" +
+                "因此，为确保所有消息都得到正确处理，应为顺序消息处理方案启用此参数。",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbActionNodeTimeseriesConfig",
         icon = "file_upload"

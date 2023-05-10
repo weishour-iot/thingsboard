@@ -39,11 +39,11 @@ import java.util.regex.Pattern;
 @Slf4j
 @RuleNode(
         type = ComponentType.TRANSFORMATION,
-        name = "copy keys",
+        name = "复制键",
         configClazz = TbCopyKeysNodeConfiguration.class,
-        nodeDescription = "Copies the msg or metadata keys with specified key names selected in the list",
-        nodeDetails = "Will fetch fields values specified in list. If specified field is not part of msg or metadata fields it will be ignored." +
-                "Returns transformed messages via <code>Success</code> chain",
+        nodeDescription = "复制列表中选定的具有指定键名的 msg 或 metadata 键",
+        nodeDetails = "将获取列表中指定的字段值。 如果指定的字段不是消息或元数据字段的一部分，它将被忽略。" +
+                "通过 <code>Success</code> 链返回转换后的消息",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbTransformationNodeCopyKeysConfig",
         icon = "content_copy"

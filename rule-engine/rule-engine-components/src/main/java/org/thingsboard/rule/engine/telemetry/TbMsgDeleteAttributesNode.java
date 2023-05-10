@@ -37,13 +37,13 @@ import static org.thingsboard.server.common.data.DataConstants.SHARED_SCOPE;
 @Slf4j
 @RuleNode(
         type = ComponentType.ACTION,
-        name = "delete attributes",
+        name = "删除属性",
         configClazz = TbMsgDeleteAttributesNodeConfiguration.class,
-        nodeDescription = "Delete attributes for Message Originator.",
-        nodeDetails = "Attempt to remove attributes by selected keys. If msg originator doesn't have an attribute with " +
-                " a key selected in the configuration, it will be ignored. If delete operation is completed successfully, " +
-                " rule node will send the \"Attributes Deleted\" event to the root chain of the message originator and " +
-                " send the incoming message via <b>Success</b> chain, otherwise, <b>Failure</b> chain is used.",
+        nodeDescription = "删除消息发起者的属性。",
+        nodeDetails = "尝试通过选定的键删除属性。 如果消息发起者没有属性" +
+                "在配置中选择的键，它将被忽略。 如果删除操作成功完成，" +
+                "规则节点会将“Attributes Deleted”事件发送到消息发起者的根链，并且" +
+                "通过<b>Success</b> 链发送传入消息，否则，使用<b>Failure</b> 链。",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbActionNodeDeleteAttributesConfig",
         icon = "remove_circle"
