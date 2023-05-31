@@ -36,11 +36,11 @@ import java.util.List;
 @Slf4j
 @RuleNode(
         type = ComponentType.ACTION,
-        name = "delete relation",
+        name = "删除关系",
         configClazz = TbDeleteRelationNodeConfiguration.class,
-        nodeDescription = "Finds target Entity by entity name pattern and then delete a relation to Originator Entity by type and direction" +
-                " if 'Delete single entity' is set to true, otherwise rule node will delete all relations to the originator of the message by type and direction.",
-        nodeDetails = "If the relation(s) successfully deleted -  Message send via <b>Success</b> chain, otherwise <b>Failure</b> chain will be used.",
+        nodeDescription = "按实体名称模式查找目标实体，然后按类型和方向删除与发起实体的关系" +
+                "如果“删除单个实体”设置为真，否则规则节点将按类型和方向删除与消息发起者的所有关系。",
+        nodeDetails = "如果关系成功删除 - 通过<b>成功</b>链发送消息，否则将使用<b>失败</b>链。",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbActionNodeDeleteRelationConfig",
         icon = "remove_circle"

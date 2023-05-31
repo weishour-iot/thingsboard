@@ -32,15 +32,15 @@ import static org.thingsboard.common.util.DonAsynchron.withCallback;
 @Slf4j
 @RuleNode(
         type = ComponentType.FILTER,
-        name = "script", relationTypes = {"True", "False"},
+        name = "脚本", relationTypes = {"True", "False"},
         configClazz = TbJsFilterNodeConfiguration.class,
-        nodeDescription = "Filter incoming messages using TBEL or JS script",
-        nodeDetails = "Evaluates boolean function using incoming message. " +
-                "The function may be written using TBEL or plain JavaScript. " +
-                "Script function should return boolean value and accepts three parameters: <br/>" +
-                "Message payload can be accessed via <code>msg</code> property. For example <code>msg.temperature < 10;</code><br/>" +
-                "Message metadata can be accessed via <code>metadata</code> property. For example <code>metadata.customerName === 'John';</code><br/>" +
-                "Message type can be accessed via <code>msgType</code> property.",
+        nodeDescription = "使用TBEL或JS脚本过滤传入消息",
+        nodeDetails = "使用传入消息计算布尔函数。" +
+                "该函数可以使用TBEL或纯JavaScript编写。" +
+                "脚本函数应该返回布尔值并接受三个参数:<br/>" +
+                "消息有效负载可以通过<code>msg</code>属性访问。 例如<code>msg.temperature < 10;</code><br/>" +
+                "消息元数据可以通过<code>metadata</code>属性访问。 例如<code>metadata.customerName === 'John';</code><br/>" +
+                "消息类型可以通过<code>msgType</code>属性访问。",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbFilterNodeScriptConfig"
 )

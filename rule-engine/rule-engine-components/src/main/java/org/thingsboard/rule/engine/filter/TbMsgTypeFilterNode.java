@@ -31,11 +31,11 @@ import org.thingsboard.server.common.msg.TbMsg;
 @Slf4j
 @RuleNode(
         type = ComponentType.FILTER,
-        name = "message type",
+        name = "消息类型",
         configClazz = TbMsgTypeFilterNodeConfiguration.class,
         relationTypes = {"True", "False"},
-        nodeDescription = "Filter incoming messages by Message Type",
-        nodeDetails = "If incoming MessageType is expected - send Message via <b>True</b> chain, otherwise <b>False</b> chain is used.",
+        nodeDescription = "按消息类型过滤传入消息",
+        nodeDetails = "如果传入的消息类型是预期的 - 通过发送消息 <b>True</b> 通道, 否则使用 <b>False</b> 通道。",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbFilterNodeMessageTypeConfig")
 public class TbMsgTypeFilterNode implements TbNode {

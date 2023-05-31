@@ -42,15 +42,15 @@ import java.util.List;
 @Slf4j
 @RuleNode(
         type = ComponentType.ACTION,
-        name = "create alarm", relationTypes = {"Created", "Updated", "False"},
+        name = "创建告警", relationTypes = {"Created", "Updated", "False"},
         configClazz = TbCreateAlarmNodeConfiguration.class,
         nodeDescription = "Create or Update Alarm",
         nodeDetails =
-                "Details - JS function that creates JSON object based on incoming message. This object will be added into Alarm.details field.\n" +
-                        "Node output:\n" +
-                        "If alarm was not created, original message is returned. Otherwise new Message returned with type 'ALARM', Alarm object in 'msg' property and 'metadata' will contains one of those properties 'isNewAlarm/isExistingAlarm'. " +
-                        "Message payload can be accessed via <code>msg</code> property. For example <code>'temperature = ' + msg.temperature ;</code>. " +
-                        "Message metadata can be accessed via <code>metadata</code> property. For example <code>'name = ' + metadata.customerName;</code>.",
+                "详细信息 - 根据传入消息创建 JSON 对象的 JS 函数。 该对象将被添加到 Alarm.details 字段中。\n" +
+                        "节点输出：\n" +
+                        "如果未创建警报，则返回原始消息。 否则，返回类型为“ALARM”的新消息、“msg”属性和“元数据”中的警报对象将包含这些属性之一“isNewAlarm/isExistingAlarm”。" +
+                        "可以通过 <code>msg</code> 属性访问消息负载。 例如 <code>'temperature = ' + msg.temperature ;</code>。" +
+                        "可以通过 <code>metadata</code> 属性访问消息元数据。 例如 <code>'name = ' + metadata.customerName;</code>。",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbActionNodeCreateAlarmConfig",
         icon = "notifications_active"

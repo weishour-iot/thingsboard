@@ -39,13 +39,13 @@ import java.util.concurrent.ExecutionException;
 @Slf4j
 @RuleNode(
         type = ComponentType.ENRICHMENT,
-        name = "fetch device credentials",
+        name = "获取设备凭据",
         configClazz = TbFetchDeviceCredentialsNodeConfiguration.class,
-        nodeDescription = "Enrich the message body or metadata with the device credentials",
-        nodeDetails = "Adds <b>credentialsType</b> and <b>credentials</b> properties to the message metadata if the " +
-                "configuration parameter <b>fetchToMetadata</b> is set to <code>true</code>, otherwise, adds properties " +
-                "to the message data. If originator type is not <b>DEVICE</b> or rule node failed to get device credentials " +
-                "- send Message via <code>Failure</code> chain, otherwise <code>Success</code> chain is used.",
+        nodeDescription = "使用设备凭据扩充消息正文或元数据",
+        nodeDetails = "在消息元数据中添加<b>credentialsType</b>和<b>credentials</b>属性" +
+                "配置参数 <b>fetchToMetadata</b> 设置为 <code>true</code>，否则，添加属性" +
+                "到消息数据。 如果发起者类型不是 <b>DEVICE</b> 或规则节点无法获取设备凭据" +
+                "- 通过<code>Failure</code> 链发送消息，否则使用<code>Success</code> 链。",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbEnrichmentNodeFetchDeviceCredentialsConfig")
 public class TbFetchDeviceCredentialsNode implements TbNode {

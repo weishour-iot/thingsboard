@@ -31,13 +31,13 @@ import java.util.UUID;
 @Slf4j
 @RuleNode(
         type = ComponentType.FLOW,
-        name = "rule chain",
+        name = "规则链",
         configClazz = TbRuleChainInputNodeConfiguration.class,
-        nodeDescription = "transfers the message to another rule chain",
-        nodeDetails = "Allows to nest the rule chain similar to single rule node. " +
-                "The incoming message is forwarded to the input node of the specified target rule chain. " +
-                "The target rule chain may produce multiple labeled outputs. " +
-                "You may use the outputs to forward the results of processing to other rule nodes.",
+        nodeDescription = "将消息传输到另一个规则链",
+        nodeDetails = "允许嵌套类似于单个规则节点的规则链。" +
+                "传入消息被转发到指定目标规则链的输入节点。" +
+                "目标规则链可能会产生多个带标签的输出。" +
+                "您可以使用输出将处理结果转发给其他规则节点。",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbFlowNodeRuleChainInputConfig",
         relationTypes = {},

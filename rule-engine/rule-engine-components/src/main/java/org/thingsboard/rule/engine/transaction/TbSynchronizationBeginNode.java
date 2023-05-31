@@ -28,12 +28,12 @@ import org.thingsboard.server.common.msg.TbMsg;
 @Slf4j
 @RuleNode(
         type = ComponentType.ACTION,
-        name = "synchronization start",
+        name = "同步开始",
         configClazz = EmptyNodeConfiguration.class,
-        nodeDescription = "This Node is now deprecated. Use \"Checkpoint\" instead.",
-        nodeDetails = "This node should be used together with \"synchronization end\" node. \n This node will put messages into queue based on message originator id. \n" +
-                "Subsequent messages will not be processed until the previous message processing is completed or timeout event occurs.\n" +
-                "Size of the queue per originator and timeout values are configurable on a system level",
+        nodeDescription = "此节点现已弃用。 请改用“检查点”。",
+        nodeDetails = "该节点应与“同步结束”节点一起使用。 \n 该节点将根据消息发起者 ID 将消息放入队列。 \n" +
+                "直到前一个消息处理完成或超时事件发生后，才会处理后续消息。\n" +
+                "每个发起者的队列大小和超时值可在系统级别配置",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbNodeEmptyConfig")
 @Deprecated

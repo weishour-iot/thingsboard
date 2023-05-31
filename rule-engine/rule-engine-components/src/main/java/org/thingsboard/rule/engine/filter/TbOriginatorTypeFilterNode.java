@@ -29,11 +29,11 @@ import org.thingsboard.server.common.msg.TbMsg;
 @Slf4j
 @RuleNode(
         type = ComponentType.FILTER,
-        name = "entity type",
+        name = "实体类型",
         configClazz = TbOriginatorTypeFilterNodeConfiguration.class,
         relationTypes = {"True", "False"},
-        nodeDescription = "Filter incoming messages by the type of message originator entity",
-        nodeDetails = "Checks that the entity type of the incoming message originator matches one of the values specified in the filter.",
+        nodeDescription = "按消息发送者实体的类型筛选传入消息",
+        nodeDetails = "检查传入消息发起者的实体类型是否与过滤器中指定的值之一匹配。",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbFilterNodeOriginatorTypeConfig")
 public class TbOriginatorTypeFilterNode implements TbNode {

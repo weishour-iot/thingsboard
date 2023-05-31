@@ -37,12 +37,12 @@ import static org.thingsboard.common.util.DonAsynchron.withCallback;
 @Slf4j
 @RuleNode(
         type = ComponentType.EXTERNAL,
-        name = "send email",
+        name = "发送邮件",
         configClazz = TbSendEmailNodeConfiguration.class,
-        nodeDescription = "Sends email message via SMTP server.",
-        nodeDetails = "Expects messages with <b>SEND_EMAIL</b> type. Node works only with messages that " +
-                " where created using <code>to Email</code> transformation Node, please connect this Node " +
-                "with <code>to Email</code> Node using <code>Successful</code> chain.",
+        nodeDescription = "通过 SMTP 服务器发送电子邮件。",
+        nodeDetails = "需要 <b>SEND_EMAIL</b> 类型的消息。 节点仅适用于消息" +
+                "使用<code>to Email</code> 转换节点创建，请连接此节点" +
+                "with <code>to Email</code> 节点使用 <code>Successful</code> 链。",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbExternalNodeSendEmailConfig",
         icon = "send"

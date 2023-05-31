@@ -28,12 +28,12 @@ import org.thingsboard.server.common.msg.TbMsg;
 @Slf4j
 @RuleNode(
         type = ComponentType.FLOW,
-        name = "output",
+        name = "输出",
         configClazz = EmptyNodeConfiguration.class,
-        nodeDescription = "transfers the message to the caller rule chain",
-        nodeDetails = "Produces output of the rule chain processing. " +
-                "The output is forwarded to the caller rule chain, as an output of the corresponding \"input\" rule node. " +
-                "The output rule node name corresponds to the relation type of the output message, and it is used to forward messages to other rule nodes in the caller rule chain. ",
+        nodeDescription = "将消息传输到调用者规则链",
+        nodeDetails = "生成规则链处理的输出。" +
+                "输出被转发到调用者规则链，作为相应“输入”规则节点的输出。" +
+                "输出规则节点名称对应输出消息的关系类型，用于将消息转发给调用者规则链中的其他规则节点。",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbFlowNodeRuleChainOutputConfig",
         outEnabled = false

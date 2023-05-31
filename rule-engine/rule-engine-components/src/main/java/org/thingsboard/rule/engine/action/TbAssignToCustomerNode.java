@@ -34,11 +34,11 @@ import org.thingsboard.server.common.msg.TbMsg;
 @Slf4j
 @RuleNode(
         type = ComponentType.ACTION,
-        name = "assign to customer",
+        name = "分配给客户",
         configClazz = TbAssignToCustomerNodeConfiguration.class,
-        nodeDescription = "Assign Message Originator Entity to Customer",
-        nodeDetails = "Finds target Customer by customer name pattern and then assign Originator Entity to this customer. " +
-                "Will create new Customer if it doesn't exists and 'Create new Customer if not exists' is set to true.",
+        nodeDescription = "将消息发起者实体分配给客户",
+        nodeDetails = "通过客户名称模式查找目标客户，然后将发起者实体分配给该客户。" +
+                "将创建新客户（如果不存在）并将“如果不存在则创建新客户”设置为 true。",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbActionNodeAssignToCustomerConfig",
         icon = "add_circle"

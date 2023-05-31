@@ -37,12 +37,12 @@ import java.util.concurrent.ExecutionException;
 @Slf4j
 @RuleNode(
         type = ComponentType.TRANSFORMATION,
-        name = "split array msg",
+        name = "拆分数组消息",
         configClazz = EmptyNodeConfiguration.class,
-        nodeDescription = "Split array message into several msgs",
-        nodeDetails = "Split the array fetched from the msg body. If the msg data is not a JSON array returns the "
-                + "incoming message as outbound message with <code>Failure</code> chain, otherwise returns "
-                + "inner objects of the extracted array as separate messages via <code>Success</code> chain.",
+        nodeDescription = "将数组消息拆分为多个消息",
+        nodeDetails = "拆分从消息正文中获取的数组。 如果 msg 数据不是 JSON 数组，则返回"
+                + "传入消息作为带有 <code>Failure</code> 链的出站消息，否则返回"
+                + "提取数组的内部对象作为单独的消息通过 <code>Success</code> 链。",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         icon = "content_copy",
         configDirective = "tbNodeEmptyConfig"

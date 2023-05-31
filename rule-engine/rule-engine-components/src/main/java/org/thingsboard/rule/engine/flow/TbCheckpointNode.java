@@ -29,10 +29,10 @@ import org.thingsboard.server.common.msg.TbMsg;
 @Slf4j
 @RuleNode(
         type = ComponentType.FLOW,
-        name = "checkpoint",
+        name = "检查点",
         configClazz = TbCheckpointNodeConfiguration.class,
-        nodeDescription = "transfers the message to another queue",
-        nodeDetails = "After successful transfer incoming message is automatically acknowledged. Queue name is configurable.",
+        nodeDescription = "将消息转移到另一个队列",
+        nodeDetails = "成功传输传入消息后会自动确认。 队列名称是可配置的。",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbActionNodeCheckPointConfig"
 )

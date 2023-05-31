@@ -38,11 +38,11 @@ import java.util.regex.Pattern;
 @Slf4j
 @RuleNode(
         type = ComponentType.TRANSFORMATION,
-        name = "delete keys",
+        name = "删除键",
         configClazz = TbDeleteKeysNodeConfiguration.class,
-        nodeDescription = "Removes keys from the msg data or metadata with the specified key names selected in the list",
-        nodeDetails = "Will fetch fields (regex) values specified in list. If specified field (regex) is not part of msg " +
-                "or metadata fields it will be ignored. Returns transformed messages via <code>Success</code> chain",
+        nodeDescription = "使用列表中选定的指定键名从消息数据或元数据中删除键",
+        nodeDetails = "将获取列表中指定的字段（正则表达式）值。 如果指定字段（正则表达式）不是 msg 的一部分" +
+                "或元数据字段将被忽略。 通过 <code>Success</code> 链返回转换后的消息",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbTransformationNodeDeleteKeysConfig",
         icon = "remove_circle"

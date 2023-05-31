@@ -30,16 +30,16 @@ import java.util.List;
 
 @RuleNode(
         type = ComponentType.TRANSFORMATION,
-        name = "script",
+        name = "脚本",
         configClazz = TbTransformMsgNodeConfiguration.class,
-        nodeDescription = "Change Message payload, Metadata or Message type using JavaScript",
-        nodeDetails = "JavaScript function receive 3 input parameters <br/> " +
-                "<code>metadata</code> - is a Message metadata.<br/>" +
-                "<code>msg</code> - is a Message payload.<br/>" +
-                "<code>msgType</code> - is a Message type.<br/>" +
-                "Should return the following structure:<br/>" +
-                "<code>{ msg: <i style=\"color: #666;\">new payload</i>,<br/>&nbsp&nbsp&nbspmetadata: <i style=\"color: #666;\">new metadata</i>,<br/>&nbsp&nbsp&nbspmsgType: <i style=\"color: #666;\">new msgType</i> }</code><br/>" +
-                "All fields in resulting object are optional and will be taken from original message if not specified.",
+        nodeDescription = "使用 JavaScript 更改消息负载、元数据或消息类型",
+        nodeDetails = "JavaScript 函数接收 3 个输入参数 <br/>" +
+                "<code>metadata</code> - 是消息元数据。<br/>" +
+                "<code>msg</code> - 是消息负载。<br/>" +
+                "<code>msgType</code> - 是消息类型。<br/>" +
+                "应返回以下结构：<br/>" +
+                "<code>{ msg: <i style=\"color: #666;\">新有效负载</i>,<br/>&nbsp&nbsp&nbsp元数据: <i style=\"color: #666;\">新元数据< /i>,<br/>&nbsp&nbsp&nbsp消息类型: <i style=\"color: #666;\">新消息类型</i> </code><br/>" +
+                "结果对象中的所有字段都是可选的，如果未指定，将从原始消息中获取。",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbTransformationNodeScriptConfig"
 )

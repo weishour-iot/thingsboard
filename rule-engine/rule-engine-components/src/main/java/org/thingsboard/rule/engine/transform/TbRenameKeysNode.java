@@ -35,11 +35,11 @@ import java.util.concurrent.ExecutionException;
 @Slf4j
 @RuleNode(
         type = ComponentType.TRANSFORMATION,
-        name = "rename keys",
+        name = "重命名键",
         configClazz = TbRenameKeysNodeConfiguration.class,
-        nodeDescription = "Renames msg data or metadata keys to the new key names selected in the key mapping.",
-        nodeDetails = "If the key that is selected in the key mapping is missed in the selected msg source(data or metadata), it will be ignored." +
-                " Returns transformed messages via <code>Success</code> chain",
+        nodeDescription = "将消息数据或元数据键重命名为在键映射中选择的新键名。",
+        nodeDetails = "如果在键映射中选择的键在选定的消息源（数据或元数据）中丢失，它将被忽略。" +
+                "通过 <code>Success</code> 链返回转换后的消息",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbTransformationNodeRenameKeysConfig",
         icon = "find_replace"

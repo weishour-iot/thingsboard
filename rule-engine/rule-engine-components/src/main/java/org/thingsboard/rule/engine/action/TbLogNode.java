@@ -37,12 +37,12 @@ import java.util.Objects;
 @Slf4j
 @RuleNode(
         type = ComponentType.ACTION,
-        name = "log",
+        name = "日志",
         configClazz = TbLogNodeConfiguration.class,
-        nodeDescription = "Log incoming messages using JS script for transformation Message into String",
-        nodeDetails = "Transform incoming Message with configured JS function to String and log final value into Thingsboard log file. " +
-                "Message payload can be accessed via <code>msg</code> property. For example <code>'temperature = ' + msg.temperature ;</code>. " +
-                "Message metadata can be accessed via <code>metadata</code> property. For example <code>'name = ' + metadata.customerName;</code>.",
+        nodeDescription = "使用 JS 脚本记录传入消息以将消息转换为字符串",
+        nodeDetails = "将带有已配置 JS 函数的传入消息转换为字符串，并将最终值记录到 Thingsboard 日志文件中。" +
+                "可以通过 <code>msg</code> 属性访问消息负载。 例如 <code>'temperature = ' + msg.temperature ;</code>。" +
+                "可以通过 <code>metadata</code> 属性访问消息元数据。 例如 <code>'name = ' + metadata.customerName;</code>。",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbActionNodeLogConfig",
         icon = "menu"

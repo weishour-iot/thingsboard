@@ -29,10 +29,10 @@ import org.thingsboard.server.common.msg.TbMsg;
 @Slf4j
 @RuleNode(
         type = ComponentType.FLOW,
-        name = "acknowledge",
+        name = "确认",
         configClazz = EmptyNodeConfiguration.class,
-        nodeDescription = "Acknowledges the incoming message",
-        nodeDetails = "After acknowledgement, the message is pushed to related rule nodes. Useful if you don't care what happens to this message next.",
+        nodeDescription = "确认传入消息",
+        nodeDetails = "确认后，将消息推送到相关规则节点。 如果您不关心此消息接下来会发生什么，则很有用。",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbNodeEmptyConfig"
 )

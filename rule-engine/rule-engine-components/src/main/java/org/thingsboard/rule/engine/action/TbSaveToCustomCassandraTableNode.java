@@ -55,16 +55,16 @@ import static org.thingsboard.common.util.DonAsynchron.withCallback;
 
 @Slf4j
 @RuleNode(type = ComponentType.ACTION,
-        name = "save to custom table",
+        name = "保存到自定义表",
         configClazz = TbSaveToCustomCassandraTableNodeConfiguration.class,
-        nodeDescription = "Node stores data from incoming Message payload to the Cassandra database into the predefined custom table" +
-                " that should have <b>cs_tb_</b> prefix, to avoid the data insertion to the common TB tables.<br>" +
-                "<b>Note:</b> rule node can be used only for Cassandra DB.",
-        nodeDetails = "Administrator should set the custom table name without prefix: <b>cs_tb_</b>. <br>" +
-                "Administrator can configure the mapping between the Message field names and Table columns name.<br>" +
-                "<b>Note:</b>If the mapping key is <b>$entity_id</b>, that is identified by the Message Originator, then to the appropriate column name(mapping value) will be write the message originator id.<br><br>" +
-                "If specified message field does not exist or is not a JSON Primitive, the outbound message will be routed via <b>failure</b> chain," +
-                " otherwise, the message will be routed via <b>success</b> chain.",
+        nodeDescription = "节点将来自传入消息负载的数据存储到 Cassandra 数据库到预定义的自定义表中" +
+                "应该有 <b>cs_tb_</b> 前缀，以避免数据插入到常见的 TB 表。<br>" +
+                "<b>注意:</b>规则节点只能用于 Cassandra DB。",
+        nodeDetails = "管理员应设置不带前缀的自定义表名称：<b>cs_tb_</b>。 <br>" +
+                "管理员可以配置消息字段名称和表列名称之间的映射。<br>" +
+                "<b>注意:</b>如果映射键是 <b>$entity_id</b>，由消息发起者标识，则将消息发起者 ID 写入适当的列名（映射值）。<br><br>" +
+                "如果指定的消息字段不存在或不是 JSON 原语，则出站消息将通过 <b>failure</b> 链路由，" +
+                "否则，消息将通过 <b>success</b> 链进行路由。",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbActionNodeCustomTableConfig",
         icon = "file_upload",

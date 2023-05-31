@@ -49,13 +49,13 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 @RuleNode(
         type = ComponentType.ACTION,
-        name = "device profile",
+        name = "设备配置文件",
         customRelations = true,
         relationTypes = {"Alarm Created", "Alarm Updated", "Alarm Severity Updated", "Alarm Cleared", "Success", "Failure"},
         configClazz = TbDeviceProfileNodeConfiguration.class,
-        nodeDescription = "Process device messages based on device profile settings",
-        nodeDetails = "Create and clear alarms based on alarm rules defined in device profile. The output relation type is either " +
-                "'Alarm Created', 'Alarm Updated', 'Alarm Severity Updated' and 'Alarm Cleared' or simply 'Success' if no alarms were affected.",
+        nodeDescription = "根据设备配置文件设置处理设备消息",
+        nodeDetails = "根据设备配置文件中定义的警报规则创建和清除警报。 输出关系类型是" +
+                "“已创建警报”、“已更新警报”、“已更新警报严重性”和“已清除警报”，如果没有警报受到影响，则只是“成功”。",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbDeviceProfileConfig"
 )

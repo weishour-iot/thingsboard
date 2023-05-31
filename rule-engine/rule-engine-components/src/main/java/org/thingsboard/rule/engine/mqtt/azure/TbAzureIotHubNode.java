@@ -37,11 +37,11 @@ import javax.net.ssl.SSLException;
 @Slf4j
 @RuleNode(
         type = ComponentType.EXTERNAL,
-        name = "azure iot hub",
+        name = "Azure物联网中心",
         configClazz = TbAzureIotHubNodeConfiguration.class,
         clusteringMode = ComponentClusteringMode.SINGLETON,
-        nodeDescription = "Publish messages to the Azure IoT Hub",
-        nodeDetails = "Will publish message payload to the Azure IoT Hub with QoS <b>AT_LEAST_ONCE</b>.",
+        nodeDescription = "将消息发布到Azure物联网中心",
+        nodeDetails = "将使用 QoS <b>AT_LEAST_ONCE</b> 将消息负载发布到Azure物联网中心。",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbExternalNodeAzureIotHubConfig"
 )

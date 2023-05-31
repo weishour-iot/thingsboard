@@ -44,15 +44,15 @@ import java.util.concurrent.TimeUnit;
 
 @RuleNode(
         type = ComponentType.TRANSFORMATION,
-        name = "deduplication",
+        name = "去重",
         configClazz = TbMsgDeduplicationNodeConfiguration.class,
-        nodeDescription = "Deduplicate messages within the same originator entity for a configurable period " +
-                "based on a specified deduplication strategy.",
-        nodeDetails = "Rule node allows you to select one of the following strategy to deduplicate messages: <br></br>" +
-                "<b>FIRST</b> - return first message that arrived during deduplication period.<br></br>" +
-                "<b>LAST</b> - return last message that arrived during deduplication period.<br></br>" +
-                "<b>ALL</b> - return all messages as a single JSON array message. " +
-                "Where each element represents object with <b>msg</b> and <b>metadata</b> inner properties.<br></br>",
+        nodeDescription = "在可配置的时间段内对同一发起者实体内的消息进行重复数据删除" +
+                "基于指定的重复数据删除策略。",
+        nodeDetails = "规则节点允许您选择以下策略之一来删除重复消息： <br></br>" +
+                "<b>FIRST</b> - 返回在重复数据删除期间到达的第一条消息。<br></br>" +
+                "<b>LAST</b> - 返回在重复数据删除期间到达的最后一条消息。<br></br>" +
+                "<b>ALL</b> - 将所有消息作为单个 JSON 数组消息返回。" +
+                "其中每个元素表示具有 <b>msg</b> 和 <b>metadata</b> 内部属性的对象。<br></br>",
         icon = "content_copy",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbActionNodeMsgDeduplicationConfig"

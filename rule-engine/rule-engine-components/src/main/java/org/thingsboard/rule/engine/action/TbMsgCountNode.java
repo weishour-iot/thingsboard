@@ -38,10 +38,10 @@ import static org.thingsboard.rule.engine.api.TbRelationTypes.SUCCESS;
 @Slf4j
 @RuleNode(
         type = ComponentType.ACTION,
-        name = "message count",
+        name = "消息计数",
         configClazz = TbMsgCountNodeConfiguration.class,
-        nodeDescription = "Count incoming messages",
-        nodeDetails = "Count incoming messages for specified interval and produces POST_TELEMETRY_REQUEST msg with messages count",
+        nodeDescription = "计数传入消息",
+        nodeDetails = "计算指定时间间隔的传入消息并生成带有消息计数的 POST_TELEMETRY_REQUEST 消息",
         icon = "functions",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbActionNodeMsgCountConfig"

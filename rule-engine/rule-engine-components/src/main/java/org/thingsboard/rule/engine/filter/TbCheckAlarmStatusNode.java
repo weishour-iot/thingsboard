@@ -38,11 +38,11 @@ import java.io.IOException;
 @Slf4j
 @RuleNode(
         type = ComponentType.FILTER,
-        name = "check alarm status",
+        name = "检查告警状态",
         configClazz = TbCheckAlarmStatusNodeConfig.class,
         relationTypes = {"True", "False"},
-        nodeDescription = "Checks alarm status.",
-        nodeDetails = "Checks the alarm status to match one of the specified statuses.",
+        nodeDescription = "查看告警状态。",
+        nodeDetails = "检查告警状态是否匹配指定状态。",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbFilterNodeCheckAlarmStatusConfig")
 public class TbCheckAlarmStatusNode implements TbNode {

@@ -43,12 +43,12 @@ import static org.thingsboard.common.util.DonAsynchron.withCallback;
 @Slf4j
 @RuleNode(
         type = ComponentType.FILTER,
-        name = "check relation",
+        name = "检查关系",
         configClazz = TbCheckRelationNodeConfiguration.class,
         relationTypes = {"True", "False"},
-        nodeDescription = "Checks the presence of the relation between the originator of the message and other entities.",
-        nodeDetails = "If 'check relation to specific entity' is selected, one must specify a related entity. " +
-                "Otherwise, the rule node checks the presence of a relation to any entity that matches the direction and relation type criteria.",
+        nodeDescription = "检查消息的发起者和其他实体之间的关系是否存在。",
+        nodeDetails = "如果选择“检查与特定实体的关系”，则必须指定一个相关实体。" +
+                "否则，规则节点将检查是否存在与任何符合方向和关系类型标准的实体的关系。",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbFilterNodeCheckRelationConfig")
 public class TbCheckRelationNode implements TbNode {

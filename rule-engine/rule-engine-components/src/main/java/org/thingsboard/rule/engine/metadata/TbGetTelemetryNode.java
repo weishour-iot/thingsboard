@@ -52,15 +52,15 @@ import static org.thingsboard.rule.engine.metadata.TbGetTelemetryNodeConfigurati
  */
 @Slf4j
 @RuleNode(type = ComponentType.ENRICHMENT,
-        name = "originator telemetry",
+        name = "发起者遥测",
         configClazz = TbGetTelemetryNodeConfiguration.class,
-        nodeDescription = "Add Message Originator Telemetry for selected time range into Message Metadata\n",
-        nodeDetails = "The node allows you to select fetch mode: <b>FIRST/LAST/ALL</b> to fetch telemetry of certain time range that are added into Message metadata without any prefix. " +
-                "If selected fetch mode <b>ALL</b> Telemetry will be added like array into Message Metadata where <b>key</b> is Timestamp and <b>value</b> is value of Telemetry.</br>" +
-                "If selected fetch mode <b>FIRST</b> or <b>LAST</b> Telemetry will be added like string without Timestamp.</br>" +
-                "Also, the rule node allows you to select telemetry sampling order: <b>ASC</b> or <b>DESC</b>. </br>" +
-                "Aggregation feature allows you to fetch aggregated telemetry as a single value by <b>AVG, COUNT, SUM, MIN, MAX, NONE</b>. </br>" +
-                "<b>Note</b>: The maximum size of the fetched array is 1000 records.\n ",
+        nodeDescription = "将选定时间范围的消息发起者遥测添加到消息元数据中\n",
+        nodeDetails = "该节点允许您选择获取模式：<b>FIRST/LAST/ALL</b> 以获取添加到消息元数据中的特定时间范围的遥测数据，无需任何前缀。" +
+                "如果选择获取模式<b>ALL</b>，Telemetry 将像数组一样添加到消息元数据中，其中<b>key</b> 是时间戳，<b>value</b> 是Telemetry 的值。</br>" +
+                "如果选择了获取模式 <b>FIRST</b> 或 <b>LAST</b>，Telemetry 将被添加为没有时间戳的字符串。</br>" +
+                "此外，规则节点允许您选择遥测采样顺序：<b>ASC</b> 或 <b>DESC</b>。 </br>" +
+                "聚合功能允许您通过 <b>AVG、COUNT、SUM、MIN、MAX、NONE</b> 获取聚合遥测作为单个值。 </br>" +
+                "<b>注意</b>：抓取数组的最大大小为1000条记录。\n ",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbEnrichmentNodeGetTelemetryFromDatabase")
 public class TbGetTelemetryNode implements TbNode {

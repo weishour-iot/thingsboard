@@ -36,15 +36,15 @@ import java.util.Set;
 @Slf4j
 @RuleNode(
         type = ComponentType.FILTER,
-        name = "switch", customRelations = true,
+        name = "切换", customRelations = true,
         relationTypes = {},
         configClazz = TbJsSwitchNodeConfiguration.class,
-        nodeDescription = "Routes incoming message to one OR multiple output connections.",
-        nodeDetails = "Node executes configured TBEL(recommended) or JavaScript function that returns array of strings (connection names). " +
-                "If Array is empty - message not routed to next Node. " +
-                "Message payload can be accessed via <code>msg</code> property. For example <code>msg.temperature < 10;</code><br/>" +
-                "Message metadata can be accessed via <code>metadata</code> property. For example <code>metadata.customerName === 'John';</code><br/>" +
-                "Message type can be accessed via <code>msgType</code> property.",
+        nodeDescription = "将传入消息路由到一个或多个输出连接。",
+        nodeDetails = "Node执行配置的TBEL(推荐)或JavaScript函数，返回字符串数组(连接名称)。" +
+                "如果“数组”为空，则消息不会路由到下一个节点。" +
+                "消息有效负载可以通过<code>msg</code>属性访问。 例如<code>msg.temperature < 10;</code><br/>" +
+                "消息元数据可以通过<code>metadata</code>属性访问。 例如<code>metadata.customerName === 'John';</code><br/>" +
+                "消息类型可以通过<code>msgType</code>属性访问。",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbFilterNodeSwitchConfig")
 public class TbJsSwitchNode implements TbNode {

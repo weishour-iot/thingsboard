@@ -46,10 +46,10 @@ import static org.thingsboard.rule.engine.api.TbRelationTypes.SUCCESS;
 @Slf4j
 @RuleNode(
         type = ComponentType.ACTION,
-        name = "generator",
+        name = "生产者",
         configClazz = TbMsgGeneratorNodeConfiguration.class,
-        nodeDescription = "Periodically generates messages",
-        nodeDetails = "Generates messages with configurable period. Javascript function used for message generation.",
+        nodeDescription = "定期生成消息",
+        nodeDetails = "生成具有可配置周期的消息。 用于消息生成的 Javascript 函数。",
         inEnabled = false,
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbActionNodeGeneratorConfig",

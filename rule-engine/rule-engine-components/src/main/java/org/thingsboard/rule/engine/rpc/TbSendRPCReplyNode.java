@@ -44,10 +44,10 @@ import java.util.UUID;
 @Slf4j
 @RuleNode(
         type = ComponentType.ACTION,
-        name = "rpc call reply",
+        name = "RPC调用回复",
         configClazz = TbSendRpcReplyNodeConfiguration.class,
-        nodeDescription = "Sends reply to RPC call from device",
-        nodeDetails = "Expects messages with any message type. Will forward message body to the device.",
+        nodeDescription = "从设备发送对RPC调用的回复",
+        nodeDetails = "期望具有任何消息类型的消息。 将消息正文转发到设备。",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbActionNodeRpcReplyConfig",
         icon = "call_merge"

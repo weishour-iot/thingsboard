@@ -38,12 +38,12 @@ import org.thingsboard.server.common.msg.TbMsg;
 
 @Slf4j
 @RuleNode(type = ComponentType.ENRICHMENT,
-        name = "customer details",
+        name = "客户详细信息",
         configClazz = TbGetCustomerDetailsNodeConfiguration.class,
-        nodeDescription = "Enrich the message body or metadata with the corresponding customer details: title, address, email, phone, etc.",
-        nodeDetails = "If checkbox: <b>Add selected details to the message metadata</b> is selected, existing fields will be added to the message metadata instead of message data.<br><br>" +
-                "<b>Note:</b> only Device, Asset, and Entity View type are allowed.<br><br>" +
-                "If the originator of the message is not assigned to Customer, or originator type is not supported - Message will be forwarded to <b>Failure</b> chain, otherwise, <b>Success</b> chain will be used.",
+        nodeDescription = "使用相应的客户详细信息扩充消息正文或元数据：标题、地址、电子邮件、电话等。",
+        nodeDetails = "如果复选框：<b>将所选详细信息添加到消息元数据</b>被选中，现有字段将被添加到消息元数据而不是消息数据。<br><br>" +
+                "<b>注意</b>：仅允许设备、资产和实体视图类型。<br><br>" +
+                "如果消息的发起者未分配给客户，或者发起者类型不受支持 - 消息将被转发到 <b>Failure</b> 链，否则，将使用 <b>Success</b> 链。",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbEnrichmentNodeEntityDetailsConfig")
 public class TbGetCustomerDetailsNode extends TbAbstractGetEntityDetailsNode<TbGetCustomerDetailsNodeConfiguration> {

@@ -32,10 +32,10 @@ import org.thingsboard.server.common.msg.TbMsg;
 
 @RuleNode(
         type = ComponentType.ACTION,
-        name = "unassign from customer",
+        name = "从客户取消分配",
         configClazz = TbUnassignFromCustomerNodeConfiguration.class,
-        nodeDescription = "Unassign Message Originator Entity from Customer",
-        nodeDetails = "Finds target Entity Customer by Customer name pattern and then unassign Originator Entity from this customer.",
+        nodeDescription = "从客户取消分配消息发起者实体",
+        nodeDetails = "按客户名称模式查找目标实体客户，然后从该客户取消分配发起人实体。",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbActionNodeUnAssignToCustomerConfig",
         icon = "remove_circle"

@@ -25,13 +25,13 @@ import org.thingsboard.server.common.data.plugin.ComponentType;
 
 @RuleNode(
         type = ComponentType.ENRICHMENT,
-        name="customer attributes",
+        name="客户属性",
         configClazz = TbGetEntityAttrNodeConfiguration.class,
-        nodeDescription = "Add Originators Customer Attributes or Latest Telemetry into Message Metadata",
-        nodeDetails = "Enrich the message metadata with the corresponding customer's latest attributes or telemetry value. " +
-                "The customer is selected based on the originator of the message: device, asset, etc. " +
+        nodeDescription = "将发起者客户属性或最新遥测数据添加到消息元数据中",
+        nodeDetails = "使用相应客户的最新属性或遥测值丰富消息元数据。" +
+                "根据消息的发起者选择客户：设备、资产等。" +
                 "</br>" +
-                "Useful when you store some parameters on the customer level and would like to use them for message processing.",
+                "当您在客户级别存储一些参数并希望将它们用于消息处理时很有用。",
         uiResources = {"static/rulenode/rulenode-core-config.js"},
         configDirective = "tbEnrichmentNodeCustomerAttributesConfig")
 public class TbGetCustomerAttributeNode extends TbEntityGetAttrNode<CustomerId> {
